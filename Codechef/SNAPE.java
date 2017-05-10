@@ -19,6 +19,7 @@ import java.io.*;
 import java.util.*;
 import java.math.*;
 import java.lang.*;
+import java.text.*;
  class Main 
  {
  		static Scanreader sc=new Scanreader();
@@ -237,28 +238,23 @@ import java.lang.*;
    		   
  		public static void main(String[] args) throws Exception
  		{
- 			//int a=sc.scanInt();
- 			int a=1;
+ 			int a=sc.scanInt();
+ 			//int a=1;
  			//String s;
- 			int c;
- 			int d;
+ 			double c;
+ 			double d;
  			
- 			int b[];
+ 			//int b[];
  			//boolean flag;
  			while(a-->0)
  			{
- 					d=0;
  					//flag=true;
  					c=sc.scanInt();
- 					b=new int[c];sc.scanInt(b);
+ 					//b=new int[c];sc.scanInt(b);
  					//s=sc.scanString();
- 					//d=sc.scanInt();
- 					for(int i=0;i<c;i++)
- 					{
- 							if(b[i]%2==0)d++;
- 					}
- 					if(d>(c-d))out("READY FOR BATTLE\n");
- 					else out("NOT READY\n");
+ 					d=sc.scanInt();
+ 					DecimalFormat df = new DecimalFormat("#.#####");
+					out(Double.valueOf(df.format((Math.sqrt((d*d)-(c*c)))))+" "+Double.valueOf(df.format((Math.sqrt((d*d)+(c*c)))))+"\n");
 
  					
  			}

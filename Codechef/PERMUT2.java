@@ -238,28 +238,39 @@ import java.lang.*;
  		public static void main(String[] args) throws Exception
  		{
  			//int a=sc.scanInt();
- 			int a=1;
+ 			//int a=1;
  			//String s;
- 			int c;
- 			int d;
+ 			int c=sc.scanInt();
+ 			//int d;
  			
  			int b[];
- 			//boolean flag;
- 			while(a-->0)
+ 			int pos[];
+ 			boolean flag;
+ 			while(c!=0)
  			{
- 					d=0;
- 					//flag=true;
- 					c=sc.scanInt();
- 					b=new int[c];sc.scanInt(b);
+ 					flag=true;
+ 					//c=sc.scanInt();
+ 					b=new int[c+1];//sc.scanInt(b);
+ 					pos=new int[c+1];
  					//s=sc.scanString();
  					//d=sc.scanInt();
- 					for(int i=0;i<c;i++)
+ 					for(int i=1;i<=c;i++)
  					{
- 							if(b[i]%2==0)d++;
- 					}
- 					if(d>(c-d))out("READY FOR BATTLE\n");
- 					else out("NOT READY\n");
+ 						b[i]=sc.scanInt();
+ 						pos[b[i]]=i;
 
+ 					}
+ 					for(int i=0;i<=c;i++)
+ 					{
+ 						if(b[i]!=pos[i])
+ 						{
+ 							flag=false;
+ 							break;
+ 						}
+ 					}
+ 					if(flag)out("ambiguous\n");
+ 					else out("not ambiguous\n");
+ 					c=sc.scanInt();
  					
  			}
 

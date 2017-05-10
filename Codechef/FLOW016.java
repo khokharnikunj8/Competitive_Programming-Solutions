@@ -197,7 +197,7 @@ import java.lang.*;
         	}    
         	for (int k = 0; k < N; k++)a[low + k] = temp[k];         
    		 }
-   		public static int gcd(int a,int b){
+   		public static long gcd(long a,long b){
         if(b==0)
             return a;
         else
@@ -237,28 +237,24 @@ import java.lang.*;
    		   
  		public static void main(String[] args) throws Exception
  		{
- 			//int a=sc.scanInt();
- 			int a=1;
+ 			int a=sc.scanInt();
+ 			//int a=1;
  			//String s;
- 			int c;
- 			int d;
- 			
- 			int b[];
+ 			long c;
+ 			long d;
+ 			long ans;
+ 			//int b[];
  			//boolean flag;
  			while(a-->0)
  			{
- 					d=0;
+ 				ans=1;
  					//flag=true;
  					c=sc.scanInt();
- 					b=new int[c];sc.scanInt(b);
+ 					//b=new int[c];sc.scanInt(b);
  					//s=sc.scanString();
- 					//d=sc.scanInt();
- 					for(int i=0;i<c;i++)
- 					{
- 							if(b[i]%2==0)d++;
- 					}
- 					if(d>(c-d))out("READY FOR BATTLE\n");
- 					else out("NOT READY\n");
+ 					d=sc.scanInt();
+ 					ans=gcd(c,d);
+ 					out(ans+" "+(c*d)/(ans)+"\n");
 
  					
  			}

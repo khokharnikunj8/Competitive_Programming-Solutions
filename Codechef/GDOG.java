@@ -237,28 +237,27 @@ import java.lang.*;
    		   
  		public static void main(String[] args) throws Exception
  		{
- 			//int a=sc.scanInt();
- 			int a=1;
+ 			int a=sc.scanInt();
+ 			//int a=1;
  			//String s;
  			int c;
  			int d;
- 			
- 			int b[];
+ 			int ans=0;
+ 			//int b[];
  			//boolean flag;
  			while(a-->0)
  			{
- 					d=0;
+ 				ans=0;
  					//flag=true;
  					c=sc.scanInt();
- 					b=new int[c];sc.scanInt(b);
+ 					//b=new int[c];sc.scanInt(b);
  					//s=sc.scanString();
- 					//d=sc.scanInt();
- 					for(int i=0;i<c;i++)
+ 					d=sc.scanInt();
+ 					for(int i=1;i<=d;i++)
  					{
- 							if(b[i]%2==0)d++;
+ 						if(c%i>ans)ans=c%i;
  					}
- 					if(d>(c-d))out("READY FOR BATTLE\n");
- 					else out("NOT READY\n");
+ 					out(ans+"\n");
 
  					
  			}
